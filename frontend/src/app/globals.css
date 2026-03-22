@@ -1,0 +1,100 @@
+:root {
+  --background: #f8f9fa;
+  --foreground: #212529;
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #dee2e6;
+  --chat-bg: #ffffff;
+  --user-msg: #e7f1ff;
+  --ai-msg: #f1f3f5;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --border-radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1d20;
+    --foreground: #f8f9fa;
+    --sidebar-bg: #212529;
+    --sidebar-border: #343a40;
+    --chat-bg: #2b3035;
+    --user-msg: #084298;
+    --ai-msg: #343a40;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--sidebar-border);
+  background: var(--sidebar-bg);
+  justify-content: space-between;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  filter: brightness(1.1);
+}
+
+.button-secondary {
+  background: var(--secondary);
+  color: white;
+}
