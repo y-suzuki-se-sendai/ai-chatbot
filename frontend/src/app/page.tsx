@@ -62,7 +62,7 @@ export default function Home() {
       console.error(error);
       setMessages(prev => [...prev, { 
         role: "ai", 
-        content: " 申し訳ありません、エラーが発生しました。しばらくしてからもう一度お試しください。" 
+        content: " 申し訳ありません、エラーが発生しました。しばらくしてからもう一度お試しください。 " 
       }]);
     } finally {
       setIsLoading(false);
